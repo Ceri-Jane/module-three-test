@@ -8,162 +8,165 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
 <body>
-
-<div class="video-container">
-  <video autoplay muted loop playsinline>
-    <source src="assets/video/phone-in-bed.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <div class="video-overlay"></div>
-  <img src="assets/images/InCollage_20250814_154714135.png" alt="Regulate Logo" class="logo-overlay">
-</div>
-
-<!-- Sign In -->
-<div id="sign-in" class="centre-box active">
-  <div class="form-heading">
-    <h1>Sign in</h1>
-    <i class="fa-solid fa-circle-info about-icon" title="About Regulate" role="button" tabindex="0" aria-controls="about-modal" aria-haspopup="dialog"></i>
+  <div class="video-container">
+    <video autoplay muted loop playsinline>
+      <source src="assets/video/phone-in-bed.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay"></div>
+    <img src="assets/images/InCollage_20250814_154714135.png" alt="Regulate Logo" class="logo-overlay">
   </div>
-  <form id="sign-in-form" method="POST" action="/login" novalidate>
-    <p class="muted switcher-text">Welcome back to Regulate.</p>
 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="username"/>
-
-    <label for="password">Password</label>
-    <div class="password-wrapper">
-      <input type="password" id="password" name="password" placeholder="••••••••" required autocomplete="current-password"/>
-      <i class="fa-solid fa-eye toggle-password" data-target="password" role="button" tabindex="0" aria-label="Toggle password visibility"></i>
+  <!-- Sign In -->
+  <div id="sign-in" class="centre-box active">
+    <div class="form-heading">
+      <h1>Sign in</h1>
+      <i class="fa-solid fa-circle-info about-icon" title="About Regulate" role="button" tabindex="0" aria-controls="about-modal" aria-haspopup="dialog"></i>
     </div>
+    <form id="sign-in-form" method="POST" action="/login" novalidate>
+      <p class="muted switcher-text">Welcome back to Regulate.</p>
 
-    <label class="checkbox">
-      <input type="checkbox" id="remember" name="remember" />
-      <span>Remember me</span>
-    </label>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="username"/>
 
-    <div id="signin-error" role="alert" style="display:none;color:#8b2a2a;font-weight:600;"></div>
+      <label for="password">Password</label>
+      <div class="password-wrapper">
+        <input type="password" id="password" name="password" placeholder="••••••••" required autocomplete="current-password"/>
+        <i class="fa-solid fa-eye toggle-password" data-target="password" role="button" tabindex="0" aria-label="Toggle password visibility"></i>
+      </div>
 
-    <div class="form-actions">
-      <button type="submit">Sign In</button>
-    </div>
+      <label class="checkbox">
+        <input type="checkbox" id="remember" name="remember" />
+        <span>Remember me</span>
+      </label>
 
-    <p class="switcher-text">Don't have an account? <a href="#" id="show-sign-up">Sign up</a></p>
-  </form>
-</div>
+      <div id="signin-error" role="alert" style="display:none;color:#8b2a2a;font-weight:600;"></div>
 
-<!-- Sign Up -->
-<div id="sign-up" class="centre-box">
-  <div class="form-heading">
-    <h1>Sign up</h1>
-    <i class="fa-solid fa-circle-info about-icon" title="About Regulate" role="button" tabindex="0" aria-controls="about-modal" aria-haspopup="dialog"></i>
+      <div class="form-actions">
+        <button type="submit">Sign In</button>
+      </div>
+
+      <p class="switcher-text">Don't have an account? <a href="#" id="show-sign-up">Sign up</a></p>
+    </form>
   </div>
-  <form id="sign-up-form" method="POST" action="/register" novalidate>
-    <p class="muted switcher-text">Create your Regulate account.</p>
 
-    <label for="new-email">Email</label>
-    <input type="email" id="new-email" name="email" placeholder="you@example.com" required autocomplete="username"/>
-
-    <label for="new-password">Password</label>
-    <div class="password-wrapper">
-      <input type="password" id="new-password" name="password" placeholder="••••••••" required autocomplete="new-password"/>
-      <i class="fa-solid fa-eye toggle-password" data-target="new-password" role="button" tabindex="0" aria-label="Toggle password visibility"></i>
+  <!-- Sign Up -->
+  <div id="sign-up" class="centre-box">
+    <div class="form-heading">
+      <h1>Sign up</h1>
+      <i class="fa-solid fa-circle-info about-icon" title="About Regulate" role="button" tabindex="0" aria-controls="about-modal" aria-haspopup="dialog"></i>
     </div>
+    <form id="sign-up-form" method="POST" action="/register" novalidate>
+      <p class="muted switcher-text">Create your Regulate account.</p>
 
-    <label for="confirm-password">Confirm Password</label>
-    <div class="password-wrapper">
-      <input type="password" id="confirm-password" name="confirm-password" placeholder="••••••••" required autocomplete="new-password"/>
-      <i class="fa-solid fa-eye toggle-password" data-target="confirm-password" role="button" tabindex="0" aria-label="Toggle password visibility"></i>
-    </div>
+      <label for="new-email">Email</label>
+      <input type="email" id="new-email" name="email" placeholder="you@example.com" required autocomplete="username"/>
 
-    <div class="form-actions">
-      <button type="submit">Sign Up</button>
-    </div>
+      <label for="new-password">Password</label>
+      <div class="password-wrapper">
+        <input type="password" id="new-password" name="password" placeholder="••••••••" required autocomplete="new-password"/>
+        <i class="fa-solid fa-eye toggle-password" data-target="new-password" role="button" tabindex="0" aria-label="Toggle password visibility"></i>
+      </div>
 
-    <p class="switcher-text">Already have an account? <a href="#" id="show-sign-in">Sign in</a></p>
-  </form>
-</div>
+      <label for="confirm-password">Confirm Password</label>
+      <div class="password-wrapper">
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="••••••••" required autocomplete="new-password"/>
+        <i class="fa-solid fa-eye toggle-password" data-target="confirm-password" role="button" tabindex="0" aria-label="Toggle password visibility"></i>
+      </div>
 
-<!-- About modal -->
-<div id="about-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="about-title" hidden>
-  <div class="modal__backdrop" data-close></div>
-  <div class="modal__panel" role="document">
-    <button class="modal__close" aria-label="Close about panel" data-close>&times;</button>
-    <h2 id="about-title">About Regulate</h2>
-    <p>
-    Regulate is your personal space to check in with how you’re feeling, without the pressure of daily streaks or perfect records.<br><br>
-Whether you want to make a quick note, choose a mood colour, or add more detail, everything is optional — you decide how much or how little to share each time.<br><br>
+      <div class="form-actions">
+        <button type="submit">Sign Up</button>
+      </div>
 
-Built with ADHD and BPD in mind, Regulate avoids overwhelming calendars and long-form journaling. Instead, it focuses on simplicity, calm design, and the ability to search your entries when you want to reflect.<br><br>
-
-Your feelings are valid here. Regulate is here to help you notice patterns, release pressure, and take care of your mental health — at your own pace.
-    </p>
+      <p class="switcher-text">Already have an account? <a href="#" id="show-sign-in">Sign in</a></p>
+    </form>
   </div>
-</div>
 
-<script>
-  // Switch forms
-  document.getElementById('show-sign-up').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.getElementById('sign-in').classList.remove('active');
-    document.getElementById('sign-up').classList.add('active');
-  });
-  document.getElementById('show-sign-in').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.getElementById('sign-up').classList.remove('active');
-    document.getElementById('sign-in').classList.add('active');
-  });
+  <!-- About modal -->
+  <div id="about-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="about-title" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" aria-label="Close about panel" data-close>&times;</button>
+      <h2 id="about-title">About Regulate</h2>
+      <p>
+        Regulate is your personal space to check in with how you’re feeling, without the pressure of daily streaks or perfect records.<br><br>
+        Whether you want to make a quick note, choose a mood colour, or add more detail, everything is optional — you decide how much or how little to share each time.<br><br>
+        Built with ADHD and BPD in mind, Regulate avoids overwhelming calendars and long-form journaling. Instead, it focuses on simplicity, calm design, and the ability to search your entries when you want to reflect.<br><br>
+        Your feelings are valid here. Regulate is here to help you notice patterns, release pressure, and take care of your mental health — at your own pace.
+      </p>
+    </div>
+  </div>
 
-  // Toggle password visibility (click or Enter/Space)
-  document.querySelectorAll('.toggle-password').forEach(icon => {
-    function toggle() {
-      const targetId = icon.getAttribute('data-target');
-      const input = document.getElementById(targetId);
-      const isPassword = input.type === 'password';
-      input.type = isPassword ? 'text' : 'password';
-      icon.classList.toggle('fa-eye');
-      icon.classList.toggle('fa-eye-slash');
-    }
-    icon.addEventListener('click', toggle);
-    icon.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+  <script>
+    // Switch forms
+    document.getElementById('show-sign-up').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('sign-in').classList.remove('active');
+      document.getElementById('sign-up').classList.add('active');
     });
-  });
+    document.getElementById('show-sign-in').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('sign-up').classList.remove('active');
+      document.getElementById('sign-in').classList.add('active');
+    });
 
-  // About modal from info icons
-  (function () {
-    const modal = document.getElementById('about-modal');
-    const aboutIcons = document.querySelectorAll('.about-icon');
-    const backdrop = modal.querySelector('.modal__backdrop');
-    const closeEls = modal.querySelectorAll('[data-close]');
-    let lastFocus = null;
-
-    function openModal(e) {
-      e?.preventDefault();
-      lastFocus = document.activeElement;
-      modal.hidden = false;
-      document.body.style.overflow = 'hidden';
-      modal.querySelector('.modal__close')?.focus();
-    }
-
-    function closeModal() {
-      modal.hidden = true;
-      document.body.style.overflow = '';
-      lastFocus?.focus();
-    }
-
-    aboutIcons.forEach(icon => {
-      icon.addEventListener('click', openModal);
+    // Toggle password visibility (click or Enter/Space)
+    document.querySelectorAll('.toggle-password').forEach(icon => {
+      function toggle() {
+        const targetId = icon.getAttribute('data-target');
+        const input = document.getElementById(targetId);
+        const isPassword = input.type === 'password';
+        input.type = isPassword ? 'text' : 'password';
+        icon.classList.toggle('fa-eye');
+        icon.classList.toggle('fa-eye-slash');
+      }
+      icon.addEventListener('click', toggle);
       icon.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(); }
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggle();
+        }
       });
     });
-    backdrop.addEventListener('click', closeModal);
-    closeEls.forEach(el => el.addEventListener('click', closeModal));
-    document.addEventListener('keydown', (e) => {
-      if (!modal.hidden && e.key === 'Escape') closeModal();
-    });
-  })();
-</script>
 
+    // About modal from info icons
+    (function () {
+      const modal = document.getElementById('about-modal');
+      const aboutIcons = document.querySelectorAll('.about-icon');
+      const backdrop = modal.querySelector('.modal__backdrop');
+      const closeEls = modal.querySelectorAll('[data-close]');
+      let lastFocus = null;
+
+      function openModal(e) {
+        e?.preventDefault();
+        lastFocus = document.activeElement;
+        modal.hidden = false;
+        document.body.style.overflow = 'hidden';
+        modal.querySelector('.modal__close')?.focus();
+      }
+
+      function closeModal() {
+        modal.hidden = true;
+        document.body.style.overflow = '';
+        lastFocus?.focus();
+      }
+
+      aboutIcons.forEach(icon => {
+        icon.addEventListener('click', openModal);
+        icon.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openModal();
+          }
+        });
+      });
+
+      backdrop.addEventListener('click', closeModal);
+      closeEls.forEach(el => el.addEventListener('click', closeModal));
+      document.addEventListener('keydown', (e) => {
+        if (!modal.hidden && e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
 </body>
 </html>
